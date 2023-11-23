@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             CocktailSeeder::class,
-            IngredientSeede::class,
+            IngredientSeeder::class,
         ]);
     }
 }
