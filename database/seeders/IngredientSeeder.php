@@ -14,7 +14,7 @@ class IngredientSeeder extends Seeder
      */
     public function run(): void
     {
-        $ingredients = ['Rum', 'Lime', 'Sugar', 'Mint', 'Tonic Water', 'Ice', 'Vodka', 'Triple Sec', 'Crawnbarry Juice', 'Gin', 'Tequila', 'Wiskhey', 'Bitter', 'Orange Peel'];
+        $ingredients = ['Rum', 'Lime', 'Sugar', 'Mint', 'Tonic Water', 'Ice', 'Vodka', 'Triple Sec', 'Cranberry Juice', 'Gin', 'Tequila', 'Wiskhey', 'Bitter', 'Orange Peel', 'Orange juice', 'Lemonsoda'];
 
         foreach ($ingredients as $ingredient) {
             $newIngredient = new Ingredient();
