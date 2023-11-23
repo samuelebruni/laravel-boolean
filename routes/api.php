@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Cocktail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::get('cocktails', function () {
+    return response()->json([
+        'success' => true,
+        'result' => Cocktail::with('ingredients')->orderByDesc('id')->paginate(12)
+    ]);
 });
