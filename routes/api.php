@@ -25,3 +25,5 @@ Route::get('cocktails', function () {
         'result' => Cocktail::with('ingredients')->orderByDesc('id')->paginate(12)
     ]);
 });
+
+Route::post('/lead', [LeadController::class, 'store']);
